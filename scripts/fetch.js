@@ -16,9 +16,9 @@ function vnode({
 }) {
 
   return [
-    'm("span", { class: "Polaris-Icon__Svg" + color ? " Polaris-Icon--" + color + " Polaris-Icon--isColored" : "" + backdrop ? " Polaris-Icon--hasBackdrop"  : "" },',
+    'm("span", { class: "Polaris-Icon__Svg" + i.color ? " Polaris-Icon--" + i.color + " Polaris-Icon--isColored" : "" + i.backdrop ? " Polaris-Icon--hasBackdrop"  : "" },',
     `m("${tagName}", ${string(properties)},`,
-        'source === "placeholder" ?',
+        'i.source === "placeholder" ?',
           'm(".Polaris-Icon__Placeholder") : ',
           `m("${c.tagName}", ${string(c.properties)})`,
       ')',
@@ -33,7 +33,7 @@ async function readIcon(path) {
  // const icon = `export default () => m('')`
   const attrs = parse(file.toString())
 
- return `export const ${upperFirst(camelCase(path.replace('.svg', '')))} = ({ backdrop, color, source }) => ${vnode(attrs)};`
+ return `export const ${upperFirst(camelCase(path.replace('.svg', '')))} = (i = {}) => ${vnode(attrs)};`
 
 }
 

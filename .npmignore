@@ -1,5 +1,6 @@
 # Dot Files
 .gitignore
+.prettierignore
 
 # Files
 rollup.config.js
@@ -8,3 +9,4 @@ readme.md
 # Directories
 test
 versions
+scripts
