@@ -16,7 +16,7 @@ function vnode({
 }) {
 
   return [
-    'm("span", { class: "Polaris-Icon__Svg" + i.color ? " Polaris-Icon--" + i.color + " Polaris-Icon--isColored" : "" + i.backdrop ? " Polaris-Icon--hasBackdrop"  : "" },',
+    'm("span", { class: "Polaris-Icon__Svg" + (i.color ? (" Polaris-Icon--" + i.color + " Polaris-Icon--isColored") : "") + (i.backdrop ? " Polaris-Icon--hasBackdrop"  : "") },',
     `m("${tagName}", ${string(properties)},`,
         'i.source === "placeholder" ?',
           'm(".Polaris-Icon__Placeholder") : ',
