@@ -27,7 +27,7 @@
     "dev": "rollup -c -w",
     "build": "rollup -c --environment prod",
     "package": "cd versions; pnpm pack ../ && cd ..",
-    "test": "ava --watch --verbose",
+    "test": "ava --watch --verbose"
   },
   "ava": {
     "require": [
