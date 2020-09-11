@@ -1,0 +1,60 @@
+{
+  "name": "mithril-polaris-icons",
+  "version": "0.1.4",
+  "description": "Mappings for 2 letter country code to 3 letter currency code",
+  "author": "Νίκος Σαβίδης <nicos@brixtoltextiles.com>",
+  "license": "MIT",
+  "main": "./package/icons.cjs.js",
+  "module": "./package/icons.es.js",
+  "types": "index.d.ts",
+  "keywords": [
+    "shopify-polaris",
+    "mithril",
+    "icons"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panoply/mithril-polaris-icons"
+  },
+  "bugs": {
+    "url": "https://github.com/panoply/mithril-polaris-icons"
+  },
+  "engines": {
+    "pnpm": ">=5"
+  },
+  "scripts": {
+    "icons": "node scripts/fetch.js",
+    "dev": "rollup -c -w",
+    "build": "rollup -c --environment prod",
+    "package": "cd versions; pnpm pack ../ && cd ..",
+    "test": "ava --watch --verbose",
+    "postpublish": "npm publish --ignore-scripts --@OWNER:registry='https://registry.npmjs.org'"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ],
+    "files": [
+      "test/*.js"
+    ],
+    "concurrency": 5
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@shopify/polaris-icons": "^3.12.0",
+    "ava": "^3.12.1",
+    "esm": "^3.2.25",
+    "fs-extra": "^9.0.1",
+    "lodash": "^4.17.20",
+    "mithril": "^2.0.4",
+    "mithril-node-render": "^3.0.0",
+    "read-file-tree": "^1.1.2",
+    "rollup": "^2.26.11",
+    "rollup-plugin-filesize": "^9.0.2",
+    "rollup-plugin-terser": "^6.1.0",
+    "svg-parser": "^2.0.4"
+  },
+  "peerDependencies": {
+    "rollup": "^2.26.11"
+  }
+}
