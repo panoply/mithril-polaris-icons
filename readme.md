@@ -4,7 +4,7 @@ Shopify Polaris icons for [Mithril.js](#) returning each icon as a [vnode](#). Y
 
 ### Why?
 
-Shopify [Polaris](https://polaris.shopify.com/) only supports React components and by doing so they help Facebook hold a monopoly on software tooling. I don't like that and I don't like React.
+Shopify [Polaris](https://polaris.shopify.com/) only supports React components and by doing so they indirectly help Facebook hold a monopoly on software tooling. I don't like that and I don't like React.
 
 ### Install
 
@@ -28,23 +28,21 @@ Each icon is exported as a function returning as [vnode](#), for example:
 import { SomeIcon, AnotherIcon } from "mithril-polaris-icons";
 
 export default {
-
+  // ...
   view:() => [
-    m('div', [
-      SomeIcon(),
-      AnotherIcon({
-        backdrop: false,
-        accessibilityLabel: 'some label',
-        color: 'colorSkyLighter',
-        source: 'default'
-      }),
-    ])
+    SomeIcon(),
+    AnotherIcon({
+      backdrop: true,
+      accessibilityLabel: 'some label',
+      color: 'colorSkyLighter',
+      source: 'default'
+    }),
   ]
 }
 
 ```
 
-Each icon function accepts and option `object{}` parameter where you can define the `Props` as you would in React. The above example would generate:
+Each icon function accepts and option `object{}` parameter where you can define the available `Props`. The above example would generate:
 
 ```html
 
@@ -54,7 +52,7 @@ Each icon function accepts and option `object{}` parameter where you can define 
 </span>
 
 <!-- Another Icon -->
-<span class="Polaris-Icon Polaris-Icon--colorSkyLighter Polaris-Icon--isColored">
+<span class="Polaris-Icon Polaris-Icon--colorSkyLighter Polaris-Icon--isColored Polaris-Icon--hasBackdrop">
   <svg
    aria-label="some label"
    viewBox="0 0 20 20"
@@ -63,6 +61,10 @@ Each icon function accepts and option `object{}` parameter where you can define 
    aria-hidden="true"><path d="M15 11h-4v4H9v-4H5V9h4V5h2v4h4v2zm-5-9a8 8 0 1 0 0 16 8 8 0 0 0 0-16z" fill-rule="evenodd" /></svg>
 </span>
 ```
+
+### Related Project
+
+- [svelte-polaris-icons](https://github.com/metonym/svelte-polaris-icons)
 
 ### TODO
 
