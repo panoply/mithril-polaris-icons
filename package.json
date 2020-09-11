@@ -1,8 +1,8 @@
 {
   "name": "mithril-polaris-icons",
   "version": "0.1.4",
-  "description": "Mappings for 2 letter country code to 3 letter currency code",
-  "author": "Νίκος Σαβίδης <nicos@brixtoltextiles.com>",
+  "description": "Shopify polaris icons export for mithril.js",
+  "author": "Νίκος Σαβίδης <nicos@gmx.com>",
   "license": "MIT",
   "main": "./package/icons.cjs.js",
   "module": "./package/icons.es.js",
