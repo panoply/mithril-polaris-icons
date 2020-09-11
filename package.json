@@ -1,11 +1,11 @@
 {
   "name": "mithril-polaris-icons",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Shopify polaris icons export for mithril.js",
   "author": "Νίκος Σαβίδης <nicos@gmx.com>",
   "license": "MIT",
-  "main": "./package/icons.cjs.js",
-  "module": "./package/icons.es.js",
+  "main": "package/icons.es.js",
+  "module": "./package/icons.cjs.js",
   "types": "index.d.ts",
   "keywords": [
     "shopify-polaris",
