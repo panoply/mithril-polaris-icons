@@ -22,28 +22,53 @@ npm install mithril-polaris-icons
 
 ### Usage
 
-Each icon is returned as a [vnode](#).
+Each icon is exported as a function returning as [vnode](#), for example:
 
 ```javascript
-import { SomeIconName } from "polaris-icons-mithril";
+import { SomeIcon, AnotherIcon } from "mithril-polaris-icons";
 
 export default {
 
   view:() => [
     m('div', [
-      SomeIconName({
+      SomeIcon(),
+      AnotherIcon({
         backdrop: false,
-        accessibilityLabel: '',
-        color: 'default',
-        source: ''
-      })
+        accessibilityLabel: 'some label',
+        color: 'colorSkyLighter',
+        source: 'default'
+      }),
     ])
   ]
 }
 
 ```
 
-### Related
+Each icon function accepts and option `object{}` parameter where you can define the `Props` as you would in React. The above example would generate:
+
+```html
+
+<!-- Some Icon -->
+<span class="Polaris-Icon">
+  <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true"><path d="M15 11h-4v4H9v-4H5V9h4V5h2v4h4v2zm-5-9a8 8 0 1 0 0 16 8 8 0 0 0 0-16z" fill-rule="evenodd" /></svg>
+</span>
+
+<!-- Another Icon -->
+<span class="Polaris-Icon Polaris-Icon--colorSkyLighter Polaris-Icon--isColored">
+  <svg
+   aria-label="some label"
+   viewBox="0 0 20 20"
+   class="Polaris-Icon__Svg"
+   focusable="false"
+   aria-hidden="true"><path d="M15 11h-4v4H9v-4H5V9h4V5h2v4h4v2zm-5-9a8 8 0 1 0 0 16 8 8 0 0 0 0-16z" fill-rule="evenodd" /></svg>
+</span>
+```
+
+### TODO
+
+- Provide Typings
+- Allow for more extensible control
+- Support custom icons
 
 ### License
 
