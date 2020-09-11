@@ -1,10 +1,10 @@
 ## Mithril Polaris Icons
 
-Shopify Polaris icons for [Mithril.js](#) returning each icon as a [vnode](#). You can see the full list of icons [here](https://polaris-icons.shopify.com/).
+Shopify [Polaris](https://polaris.shopify.com/) icon support for those using [Mithril.js](#https://mithril.js.org/) in app development. Provides each icon as function exporting a simple [vnode](#https://mithril.js.org/vnodes.html#basics). You can see the full list of polaris icons [here](https://polaris-icons.shopify.com/).
 
 ### Why?
 
-Shopify [Polaris](https://polaris.shopify.com/) only supports React components and by doing so they indirectly help Facebook hold a monopoly on software tooling. I don't like that and I don't like React.
+Because **Mithril** is dope and Shopify Polaris only supports React components and by doing so they indirectly help Facebook hold a monopoly on software tooling. I don't like that and I don't like React.
 
 ### Install
 
@@ -42,7 +42,7 @@ export default {
 
 ```
 
-Each icon function accepts and option `object{}` parameter where you can define the available `Props`. The above example would generate:
+Each icon function accepts an option `object{}` parameter where you can define the available `Props`. The above example would generate:
 
 ```html
 
@@ -74,6 +74,6 @@ Each icon function accepts and option `object{}` parameter where you can define 
 
 ### License
 
-Licensed under [MIT](#LICENCE)
+[MIT](#LICENCE)
 
 

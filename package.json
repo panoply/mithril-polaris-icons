@@ -1,6 +1,6 @@
 {
   "name": "mithril-polaris-icons",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Shopify polaris icons export for mithril.js",
   "author": "Νίκος Σαβίδης <nicos@gmx.com>",
   "license": "MIT",
@@ -28,7 +28,6 @@
     "build": "rollup -c --environment prod",
     "package": "cd versions; pnpm pack ../ && cd ..",
     "test": "ava --watch --verbose",
-    "postpublish": "npm publish --ignore-scripts --@OWNER:registry='https://registry.npmjs.org'"
   },
   "ava": {
     "require": [
